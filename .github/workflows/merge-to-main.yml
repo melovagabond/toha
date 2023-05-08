@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Create/Update release draft
+<<<<<<< HEAD:.github/workflows/merge-to-main.yml
     - uses: release-drafter/release-drafter@v6.0.0
+=======
+    - uses: release-drafter/release-drafter@v5.21.1
+>>>>>>> 46969da (updated to stable release):.github/workflows/draft-release.yml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

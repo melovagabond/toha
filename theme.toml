@@ -1,6 +1,7 @@
 name = "Toha"
 license = "MIT"
 licenselink = "https://github.com/hugo-toha/toha/blob/master/LICENSE"
+<<<<<<< HEAD
 description = "A simple hugo theme for personal portfolio"
 
 # The home page of the theme, where the source can be found.
@@ -8,6 +9,10 @@ homepage = "https://github.com/hugo-toha/toha"
 
 # If you have a running demo of the theme.
 demosite = "https://hugo-toha.github.io/"
+=======
+min_version = "0.87.0"
+name = "Toha"
+>>>>>>> 46969da (updated to stable release)
 
 tags = [
   "Portfolio",

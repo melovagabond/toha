@@ -1,5 +1,6 @@
 <!-- Add Analytics if enabled in configuration -->
 {{ with site.Params.features.analytics }}
+<<<<<<< HEAD
     {{ if or .enable .enabled }}
         {{ with .services }}
             <!-- Google Analytics -->
@@ -8,6 +9,15 @@
                 {{ $analyticsConfig := dict (slice "Site" "Config" "Services" "GoogleAnalytics" "ID") .id }}
                 {{ template "_internal/google_analytics.html" (merge $privacyConfig $analyticsConfig) }}
             {{ end }}
+=======
+    {{ if .enabled }}
+        <!-- Google Analytics -->
+        {{ with .google }}
+            {{ $privacyConfig:= dict (slice "Site" "Config" "Privacy" "GoogleAnalytics") $.Site.Config.Privacy.GoogleAnalytics }}
+            {{ $analyticsConfig := dict (slice "Site" "GoogleAnalytics") .id }}
+            {{ template "_internal/google_analytics.html" (merge $privacyConfig $analyticsConfig) }}
+        {{ end }}
+>>>>>>> 46969da (updated to stable release)
 
             <!-- Counter.dev -->
             {{ with .counterDev }}
@@ -17,6 +27,7 @@
                 ></script>
             {{ end }}
 
+<<<<<<< HEAD
             <!-- GoatCounter -->
             {{ with .goatCounter }}
                 {{ with .code }}
@@ -57,6 +68,33 @@
             <script defer src='{{ or .scheme "https" }}://{{ or .instance "analytics.eu.umami.is" }}/script.js' data-website-id="{{ .id }}"></script>
             <!-- End Umami analytics -->
             {{end}}
+=======
+        <!-- GoatCounter -->
+        {{ with .goatCounter }}
+            <script
+            data-goatcounter="https://{{ .code }}.goatcounter.com/count"
+            async
+            src="/js/goat-counter.js"
+            ></script>
+        {{ end }}
+
+        <!-- Piwik/Matomo -->
+        {{ with .matomo }}
+        <!-- Matomo -->
+            <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//{{ .instance }}/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '{{ .siteId }}']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+            </script>
+>>>>>>> 46969da (updated to stable release)
         {{ end }}
     {{ end }}
 {{ end }}
