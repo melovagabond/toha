@@ -115,6 +115,10 @@
                 <li><a href={{ printf "https://github.com/%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
                 </a></li>
+                {{ else if (eq $key "calendly") }}
+                <li><a href={{ printf "https://calendly.com/%s" $value }} target="_blank" rel="noopener">
+                  <span><i class="far fa-calendar-alt"></i></span> <span>{{ $value }}</span>
+                </a></li>
               {{ else if reflect.IsMap $value }}
                 <li>
                   {{ if (and (isset $value "url") (isset $value "icon"))}}
