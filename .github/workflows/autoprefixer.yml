@@ -9,10 +9,17 @@ jobs:
     steps:
       - name: Checkout to latest commit
 <<<<<<< HEAD
+<<<<<<< HEAD
         uses: actions/checkout@v4.1.7
 =======
         uses: actions/checkout@v3.1.0
 >>>>>>> 46969da (updated to stable release)
+=======
+        uses: actions/checkout@v3.1.0
+=======
+        uses: actions/checkout@v4.1.7
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,10 +33,17 @@ jobs:
 
       - name: Create Pull Request
 <<<<<<< HEAD
+<<<<<<< HEAD
         uses: peter-evans/create-pull-request@v6
 =======
         uses: peter-evans/create-pull-request@v4
 >>>>>>> 46969da (updated to stable release)
+=======
+        uses: peter-evans/create-pull-request@v4
+=======
+        uses: peter-evans/create-pull-request@v6
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
         with:
           branch: autoprefixer
           branch-suffix: timestamp

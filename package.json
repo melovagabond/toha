@@ -1,5 +1,9 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2e395f0 (initial for rebase)
   "author": "Emruz Hossain",
   "bugs": {
     "url": "https://github.com/hugo-toha/toha/issues"
@@ -68,8 +72,12 @@
   "homepage": "https://github.com/hugo-toha/toha#readme",
   "license": "MIT",
   "main": "index.js",
+<<<<<<< HEAD
 =======
 >>>>>>> 46969da (updated to stable release)
+=======
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
   "name": "toha",
   "version": "1.0.0",
   "description": "A [Hugo](https://gohugo.io/) theme for a personal portfolio with minimalist design and responsiveness.",

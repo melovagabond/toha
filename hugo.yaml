@@ -23,8 +23,12 @@ module:
     target: static/files
   - source: ../../node_modules/katex/dist/fonts
     target: static/fonts
+<<<<<<< HEAD
 <<<<<<< HEAD:hugo.yaml
 =======
+=======
+<<<<<<< HEAD:config.yaml
+>>>>>>> 2e395f0 (initial for rebase)
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 # DefaultContentLanguage: bn
@@ -175,4 +179,9 @@ params:
         plyr:
           # options doc: https://github.com/sampotts/plyr#options
           # fullscreen: true
+<<<<<<< HEAD
 >>>>>>> 7def190 (customized config.yaml):config.yaml
+=======
+=======
+>>>>>>> upstream/main:hugo.yaml
+>>>>>>> 2e395f0 (initial for rebase)

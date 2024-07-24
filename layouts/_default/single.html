@@ -59,11 +59,14 @@
           <h1>{{ .Page.Title }}</h1>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {{ if not (site.Params.features.blog.showAuthor | default true) }}
         <div class="author-profile ms-auto align-self-lg-center">
           <p class="text-muted">{{ .Page.Date | time.Format ":date_full" }}{{ if site.Params.features.readingTime }} | {{ .ReadingTime }} {{i18n "minute" .ReadingTime }}{{ end }}</p>
 =======
+=======
+>>>>>>> 2e395f0 (initial for rebase)
         {{ if site.Params.enableTags }}
         <div class="taxonomy-terms">
           <ul style="padding-left: 0;">
@@ -72,7 +75,16 @@
             <li class="rounded"><a href="{{ $url | urlize | relLangURL }}" class="btn, btn-sm">{{ . }}</a></li>
             {{ end }}
           </ul>
+<<<<<<< HEAD
 >>>>>>> 46969da (updated to stable release)
+=======
+=======
+
+        {{ if not (site.Params.features.blog.showAuthor | default true) }}
+        <div class="author-profile ms-auto align-self-lg-center">
+          <p class="text-muted">{{ .Page.Date | time.Format ":date_full" }}{{ if site.Params.features.readingTime }} | {{ .ReadingTime }} {{i18n "minute" .ReadingTime }}{{ end }}</p>
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
         </div>
         {{ end }}
 

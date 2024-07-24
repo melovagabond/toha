@@ -10,10 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Create/Update release draft
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/merge-to-main.yml
     - uses: release-drafter/release-drafter@v6.0.0
 =======
     - uses: release-drafter/release-drafter@v5.21.1
 >>>>>>> 46969da (updated to stable release):.github/workflows/draft-release.yml
+=======
+<<<<<<< HEAD:.github/workflows/draft-release.yml
+    - uses: release-drafter/release-drafter@v5.21.1
+=======
+    - uses: release-drafter/release-drafter@v6.0.0
+>>>>>>> upstream/main:.github/workflows/merge-to-main.yml
+>>>>>>> 2e395f0 (initial for rebase)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

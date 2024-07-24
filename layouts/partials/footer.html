@@ -115,10 +115,23 @@
                 <li><a href={{ printf "https://github.com/%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
                 </a></li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {{ else if (eq $key "calendly") }}
+                <li><a href={{ printf "https://calendly.com/%s" $value }} target="_blank" rel="noopener">
+                  <span><i class="far fa-calendar-alt"></i></span> <span>{{ $value }}</span>
+                </a></li>
+=======
+>>>>>>> 2e395f0 (initial for rebase)
               {{ else if (eq $key "researchgate") }}
                 <li><a href={{ printf "https://www.researchgate.net/profile/%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-researchgate"></i></span> <span>{{ $author.name }}</span>
                 </a></li>            
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
               {{ else if reflect.IsMap $value }}
                 <li>
                   {{ if (and (isset $value "url") (isset $value "icon"))}}

@@ -4,12 +4,21 @@
 {{ end }}
 <li class="nav-item dropdown">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ if ne site.Params.features.flags.enable false }}
 =======
     <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{ if ne site.Params.showFlags false }}
 >>>>>>> 46969da (updated to stable release)
+=======
+    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ if ne site.Params.showFlags false }}
+=======
+    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ if ne site.Params.features.flags.enable false }}
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
             {{ $countryCode := partial "helpers/country-code.html" . }}
             <span class="flag-icon flag-icon-{{$countryCode}}"></span>
         {{ end }}
@@ -18,12 +27,21 @@
     <div class="dropdown-menu" aria-labelledby="languageSelector">
         {{ range site.Home.AllTranslations }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <a class="dropdown-item nav-link languages-item" href="{{ path.Join "/" (cond (eq .Language.Lang $.Sites.First.Language.Lang) "" .Language.Lang) $pageURL }}">
             {{ if ne site.Params.features.flags.enable false }}
 =======
         <a class="dropdown-item nav-link languages-item" href="{{ .RelPermalink }}">
             {{ if ne site.Params.showFlags false }}
 >>>>>>> 46969da (updated to stable release)
+=======
+        <a class="dropdown-item nav-link languages-item" href="{{ .RelPermalink }}">
+            {{ if ne site.Params.showFlags false }}
+=======
+        <a class="dropdown-item nav-link languages-item" href="{{ path.Join "/" (cond (eq .Language.Lang $.Sites.First.Language.Lang) "" .Language.Lang) $pageURL }}">
+            {{ if ne site.Params.features.flags.enable false }}
+>>>>>>> upstream/main
+>>>>>>> 2e395f0 (initial for rebase)
                 {{ $countryCode := partial "helpers/country-code.html" . }}
                 <span class="flag-icon flag-icon-{{$countryCode}}"></span>
             {{ end }}
