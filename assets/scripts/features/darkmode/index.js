@@ -1,14 +1,6 @@
 const PERSISTENCE_KEY = 'darkmode:color-scheme'
 
-async function getService () {
-  if (process.env.FEATURE_DARKMODE_DARKREADER === '1') {
-    return await import('./darkreader')
-  }
-
-  throw Error(' No service defined for feature darkMode.')
-}
-
-window.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('load', async () => {
   const menu = document.getElementById('themeMenu')
   const $icon = document.getElementById('navbar-theme-icon-svg')
   if (menu == null || $icon == null) return
@@ -20,33 +12,35 @@ window.addEventListener('DOMContentLoaded', async () => {
     return map
   }, {})
 
-  const {
-    setSchemeDark,
-    setSchemeLight,
-    setSchemeSystem,
-    defaultColorScheme
-  } = await getService()
 
-  function loadScheme () {
-    return localStorage.getItem(PERSISTENCE_KEY) || defaultColorScheme
+  function loadScheme() {
+    return localStorage.getItem(PERSISTENCE_KEY) || "system"
   }
 
-  function saveScheme (scheme) {
+  function saveScheme(scheme) {
     localStorage.setItem(PERSISTENCE_KEY, scheme)
   }
 
-  function setScheme (newScheme) {
+  function getPreferredColorScheme() {
+    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return isDarkMode ? "dark" : "light";
+  }
+
+  function setScheme(newScheme) {
+    let theme = newScheme
+    if (newScheme === 'system') {
+      theme = getPreferredColorScheme()
+    }
+    // set data-theme attribute on html tag
+    document.querySelector("html").dataset.theme = theme;
+
+    // update icon
     $icon.src = iconMap[newScheme]
 
-    if (newScheme === 'dark') {
-      setSchemeDark()
-    } else if (newScheme === 'system') {
-      setSchemeSystem()
-    } else {
-      setSchemeLight()
-    }
-
+    // save preference to local storage
     saveScheme(newScheme)
+
+    setImages(theme)
   }
 
   setScheme(loadScheme())
@@ -58,3 +52,19 @@ window.addEventListener('DOMContentLoaded', async () => {
     })
   })
 })
+
+function setImages(newScheme) {
+  const els = Array.from(document.getElementsByClassName('logo-holder'));
+  for (const el of els) {
+    const light = el.querySelector('.light-logo');
+    const dark = el.querySelector('.dark-logo');
+    if (newScheme === "dark" && dark !== null) {
+      if (light !== null) light.style.display = 'none'
+      dark.style.display = 'inline'
+    }
+    else {
+      if (light !== null) light.style.display = 'inline'
+      if (dark !== null) dark.style.display = 'none'
+    }
+  }
+}

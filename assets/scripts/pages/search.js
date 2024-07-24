@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const searchQuery = param('keyword')
   if (searchQuery) {
-    document.getElementById('search-query').value = searchQuery
+    document.getElementById('search-box').value = searchQuery
     executeSearch(searchQuery)
   } else {
     const node = document.createElement('p')
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function executeSearch (searchQuery) {
     const url = window.location.href.split('/search/')[0] + '/index.json'
 
-    fetch(url).then(function (data) {
+    fetch(url).then(response => response.json()).then(function (data) {
       const pages = data
       const fuse = new Fuse(pages, fuseOptions)
       const results = fuse.search(searchQuery)
@@ -79,6 +79,13 @@ window.addEventListener('DOMContentLoaded', () => {
       // pull template from hugo template definition
       const templateDefinition = document.getElementById('search-result-template').innerHTML
       // replace values
+      function adaptTags() {
+        const tags = value.item.tags;
+        let string = '';
+        if (tags) tags.forEach((t) => {string += '<li class="rounded"><a href="/tags/' + t.toLowerCase() + '/" class="btn btn-sm btn-info">' + t + "</a></li>"});
+        return string;
+      }
+
       const output = render(templateDefinition, {
         key,
         title: value.item.title,
@@ -86,13 +93,13 @@ window.addEventListener('DOMContentLoaded', () => {
         date: value.item.date,
         summary: value.item.summary,
         link: value.item.permalink,
-        tags: value.item.tags,
+        tags: adaptTags(),
         categories: value.item.categories,
         snippet
       })
 
-      const doc = new DOMParser().parseFromString(output, 'text/html')
-      document.getElementById('search-results').append(doc)
+      const dom = new DOMParser().parseFromString(output, 'text/html')
+      document.getElementById('search-results').append(dom.getElementsByClassName('post-card')[0])
 
       snippetHighlights.forEach(function (snipvalue) {
         const context = document.getElementById('#summary-' + key)
