@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 > [!IMPORTANT]
 > If you are migrating from v3 (`git submodule` based) theme to v4 (`hugo modules` based) theme, please read this [migration guide](https://toha-guides.netlify.app/posts/update-v3-to-v4/).
 
@@ -12,6 +13,13 @@
 
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+=======
+> [!IMPORTANT]
+> If you are migrating from v3 (`git submodule` based) theme to v4 (`hugo modules` based) theme, please read this [migration guide](https://toha-guides.netlify.app/posts/update-v3-to-v4/).
+
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 # Toha
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b1b93b02-f278-440b-ae1b-304e9f4c4ab5/deploy-status)](https://app.netlify.com/sites/toha/deploys)
@@ -78,11 +86,17 @@ For more details about the features please visit [here](https://toha-guides.netl
 - Arabic (العربية)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+- Português
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 - Português Europeu
 - Català
 - Português Brasileiro
 - Nederlands
 - Hebrew
+<<<<<<< HEAD
 =======
 - Português
 >>>>>>> 46969da (updated to stable release)
@@ -96,6 +110,9 @@ For more details about the features please visit [here](https://toha-guides.netl
 - Hebrew
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
 To know more about how to translate your site, please visit [here](https://toha-guides.netlify.app/posts/translation/). Follow, the data and post format from this [example site](https://hugo-toha.github.io).
 
@@ -119,6 +136,7 @@ Here are few screenshots from the [example site](https://hugo-toha.github.io).
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Hugo Version 0.118.0 (extended) or higher
 - Go language 1.18 or higher (require for hugo modules)
 - Node version v18.x or later and npm 8.x or later.
@@ -133,6 +151,14 @@ Here are few screenshots from the [example site](https://hugo-toha.github.io).
 - Node version v18.x or later and npm 8.x or later.
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+- Hugo Version 0.87.0 or higher
+=======
+- Hugo Version 0.118.0 (extended) or higher
+- Go language 1.18 or higher (require for hugo modules)
+- Node version v18.x or later and npm 8.x or later.
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
 ## Usage
 
@@ -150,15 +176,19 @@ $ git submodule add https://github.com/hugo-toha/toha.git themes/toha
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Now, in your `hugo.yaml` file, add a `module` section.
 =======
 =======
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 If you don't already have a hugo site, create one by following the step-by-step guide from [here](https://toha-guides.netlify.app/posts/getting-started/prepare-site/).
 
 #### Configuring Site
 
 Now, configure your site to use `toha` theme by adding the following configuration in `config.yaml` file of your site.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 46969da (updated to stable release)
 =======
@@ -166,6 +196,11 @@ Now, configure your site to use `toha` theme by adding the following configurati
 Now, in your `hugo.yaml` file, add a `module` section.
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+=======
+Now, in your `hugo.yaml` file, add a `module` section.
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
 ```yaml
 baseURL: https://hugo-toha.github.io
@@ -228,6 +263,11 @@ params:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Don't forget to update `title`, `baseURL`, and `gitRepo` fields with your own information. To know about more available configuration options, please visit [here](https://toha-guides.netlify.app/posts/configuration/site-parameters/).
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 Check this sample [hugo.yaml](https://github.com/hugo-toha/hugo-toha.github.io/blob/main/hugo.yaml) for further reference.
 
 ##### 3. Update your module
@@ -237,6 +277,7 @@ Now, run this command to load this theme as your module.
 ```bash
 hugo mod tidy
 ```
+<<<<<<< HEAD
 =======
 Don't forget to update `title`, `baseURL`, and `gitRepo` fields with your own information. To know about more available configuration options, please visit [here](https://toha-guides.netlify.app/posts/configuration/site-parameters/).
 >>>>>>> 46969da (updated to stable release)
@@ -254,6 +295,9 @@ hugo mod tidy
 ```
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
 #### Running Locally
 

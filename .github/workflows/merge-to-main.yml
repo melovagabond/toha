@@ -11,17 +11,23 @@ jobs:
     steps:
     # Create/Update release draft
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/merge-to-main.yml
     - uses: release-drafter/release-drafter@v6.0.0
 =======
     - uses: release-drafter/release-drafter@v5.21.1
 >>>>>>> 46969da (updated to stable release):.github/workflows/draft-release.yml
 =======
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 <<<<<<< HEAD:.github/workflows/draft-release.yml
     - uses: release-drafter/release-drafter@v5.21.1
 =======
     - uses: release-drafter/release-drafter@v6.0.0
 >>>>>>> upstream/main:.github/workflows/merge-to-main.yml
+<<<<<<< HEAD
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

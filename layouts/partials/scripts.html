@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {{ partial "helpers/script-bundle.html" }}
 =======
 =======
@@ -25,3 +26,22 @@
 {{ partial "helpers/script-bundle.html" }}
 >>>>>>> upstream/main
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+<script type="text/javascript" src="{{ "/js/jquery-3.4.1.min.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "/js/popper.min.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "/js/bootstrap.min.js" | relURL }}"></script>
+
+<script type="text/javascript" src="{{ "/js/navbar.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "/js/plyr.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "/js/main.js" | relURL }}"></script>
+
+{{ if site.Params.darkMode.enable }}
+{{ if eq site.Params.darkMode.provider "darkreader" }}
+<script type="text/javascript" src="{{ "/js/darkreader.js" | relURL }}"></script>
+<script type="text/javascript" src="{{ "/js/darkmode-darkreader.js" | relURL }}"></script>
+{{ end }}
+{{ end }}
+=======
+{{ partial "helpers/script-bundle.html" }}
+>>>>>>> upstream/main
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0

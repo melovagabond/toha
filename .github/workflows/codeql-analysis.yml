@@ -41,16 +41,22 @@ jobs:
     - name: Checkout repository
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       uses: actions/checkout@v4.1.7
 =======
       uses: actions/checkout@v3.1.0
 >>>>>>> 46969da (updated to stable release)
 =======
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
       uses: actions/checkout@v3.1.0
 =======
       uses: actions/checkout@v4.1.7
 >>>>>>> upstream/main
+<<<<<<< HEAD
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL

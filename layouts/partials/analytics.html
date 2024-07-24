@@ -2,6 +2,7 @@
 {{ with site.Params.features.analytics }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     {{ if or .enable .enabled }}
         {{ with .services }}
             <!-- Google Analytics -->
@@ -13,6 +14,8 @@
 =======
 =======
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
     {{ if .enabled }}
         <!-- Google Analytics -->
         {{ with .google }}
@@ -21,8 +24,11 @@
             {{ template "_internal/google_analytics.html" (merge $privacyConfig $analyticsConfig) }}
         {{ end }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 46969da (updated to stable release)
 =======
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 =======
     {{ if or .enable .enabled }}
         {{ with .services }}
@@ -33,7 +39,10 @@
                 {{ template "_internal/google_analytics.html" (merge $privacyConfig $analyticsConfig) }}
             {{ end }}
 >>>>>>> upstream/main
+<<<<<<< HEAD
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 
             <!-- Counter.dev -->
             {{ with .counterDev }}
@@ -43,6 +52,7 @@
                 ></script>
             {{ end }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <!-- GoatCounter -->
@@ -88,6 +98,8 @@
 =======
 =======
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
         <!-- GoatCounter -->
         {{ with .goatCounter }}
             <script
@@ -114,8 +126,11 @@
             })();
             </script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 46969da (updated to stable release)
 =======
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
 =======
             <!-- GoatCounter -->
             {{ with .goatCounter }}
@@ -158,7 +173,10 @@
             <!-- End Umami analytics -->
             {{end}}
 >>>>>>> upstream/main
+<<<<<<< HEAD
 >>>>>>> 2e395f0 (initial for rebase)
+=======
+>>>>>>> 2e395f05247e00814659ae78ebf9d7a5403b59c0
         {{ end }}
     {{ end }}
 {{ end }}
